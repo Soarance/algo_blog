@@ -8,6 +8,9 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://algo-blog.soarance.workers.dev',
 	integrations: [mdx(), sitemap()],
+	image: {
+		service: { entrypoint: 'astro/assets/services/noop' },
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),
